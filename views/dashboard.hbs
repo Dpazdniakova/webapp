@@ -1,0 +1,43 @@
+{{> menu id="dashboard"}}
+
+<section class="ui left aligned middle aligned segment">
+  
+  <h2 style ="text-align: center; color:  #ffcc00;">Movie Tracker Dashboard</h2>
+  
+<!--   object from controller/directors.js  -->
+  {{#unless directors}} 
+    <h3 class="ui message">
+      Start adding your favorite directors!
+    </h3>
+  {{/unless}}
+
+  {{#each directors}}
+    <section class="ui left aligned middle aligned segment">
+
+      <h3>
+        {{name}}
+      </h3>
+      
+      {{#if movies.length}}
+        <p>Total movies: {{movies.length}}</p>
+      {{else}}
+        <p>No movies listed</p>
+      {{/if}}
+      
+      <a href="/director/{{id}}">  
+        <i class="black film icon"></i>  
+      </a> 
+      <a href="/dashboard/deletedirector/{{id}}">
+   <i class="ui trash black icon"></i>
+</a>
+
+    </section>
+  {{/each}}
+  
+</section>
+
+  <section class="ui center aligned middle aligned segment">
+
+    {{> adddirector}}
+
+  </section> 

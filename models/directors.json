@@ -1,0 +1,182 @@
+{
+  "directors": [
+    {
+      "id": "01",
+      "name": "Christopher Nolan",
+      "movies": [
+        {
+          "movieId": "001",
+          "title": "The Dark Knight",
+          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/thedarknight.jpg?v=1741116929238",
+          "year": 2008,
+          "duration": 152,
+          "genres": [
+            "Action",
+            "Thriller",
+            "Mystery"
+          ],
+          "description": "The plot follows the vigilante Batman, police lieutenant James Gordon, and district attorney Harvey Dent, who form an alliance to dismantle organized crime in Gotham City. Their efforts are derailed by the Joker, an anarchistic mastermind who seeks to test how far Batman will go to save the city from chaos.",
+          "watchLater": false,
+          "streamingServices": [
+            {
+              "name": "Sky",
+              "url": "https://www.skystore.com/product/the-dark-knight/99f8df58-046e-47b2-abd0-4a0b22fa40df",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/Sky_Group_logo_2020.svg.png?v=1741379860875"
+            },
+            {
+              "name": "Now TV",
+              "url": "https://www.nowtv.com/ie/online/the-dark-knight-2008/A5EK6sKrAaydmp1JYfy1h",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+            }
+          ]
+        },
+        {
+          "movieId": "002",
+          "title": "Inception",
+          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/inception.jpg?v=1741116931277",
+          "year": 2010,
+          "duration": 148,
+          "genres": [
+            "Sci-Fi",
+            "Thriller",
+            "Action"
+          ],
+          "description": "A skilled thief, Dom Cobb, who enters the dreams of others to steal secrets from their subconscious, is given the inverse task of planting an idea into the mind of a CEO, while facing his troubled past that threatens his mission.",
+          "watchLater": false,
+          "streamingServices": [
+            {
+              "name": "Amazon Prime",
+              "url": "https://www.primevideo.com/dp/amzn1.dv.gti.5ca9f69c-796e-2320-e56f-f758fa5957b5?autoplay=0&ref_=atv_cf_strg_wb",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+            },
+            {
+              "name": "Now TV",
+              "url": "https://www.nowtv.com/ie/online/inception-2010/A5EK5E17HwqzgJFQtcAjd",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+            }
+          ]
+        },
+        {
+          "movieId": "003",
+          "title": "Interstellar",
+          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/interstellar.jpg?v=1741116939099",
+          "year": 2014,
+          "duration": 169,
+          "genres": [
+            "Sci-Fi",
+            "Drama",
+            "Adventure"
+          ],
+          "description": "In a dystopian future where Earth is on the brink of collapse, a group of astronauts travel through a wormhole in search of a habitable planet to save humanity. The film explores themes of love, sacrifice, and time dilation.",
+          "watchLater": false,
+          "streamingServices": [
+            {
+              "name": "Now TV",
+              "url": "https://www.skystore.com/product/interstellar/36c3f6fa-d396-4579-88c5-003667fadddb",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+            },
+            {
+              "name": "Amazon Prime",
+              "url": "https://www.amazon.com/Interstellar-Matthew-McConaughey/dp/B00TU9UFTS",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+            }
+          ]
+        },
+        {
+          "id": "001",
+          "title": "The ",
+          "director": "Christopher Nolan"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Michael Curtiz",
+      "movies": [
+        {
+          "movieId": "004",
+          "title": "Casablanca",
+          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/casablanca.jpg?v=1741116933128",
+          "year": 1942,
+          "duration": 102,
+          "genres": [
+            "Romance",
+            "Drama",
+            "War"
+          ],
+          "description": "During World War II, an American expatriate must choose between his love for a woman and helping her and her husband, a Czech Resistance leader, escape from Casablanca to continue their fight against the Nazis.",
+          "watchLater": false,
+          "streamingServices": [
+            {
+              "name": "Sky",
+              "url": "https://www.skystore.com/product/casablanca/4f4ba117-ce9e-49a4-ab70-5194bb9ab1c6",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/Sky_Group_logo_2020.svg.png?v=1741379860875"
+            },
+            {
+              "name": "Amazon Prime",
+              "url": "https://www.primevideo.com/dp/amzn1.dv.gti.d6e46deb-31db-496e-ad4b-36c3279188cd?autoplay=0&ref_=atv_cf_strg_wb",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+            }
+          ]
+        },
+        {
+          "movieId": "005",
+          "title": "The Adventures of Robin Hood",
+          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/theadventuresofrobinhood.jpg?v=1741116928072",
+          "year": 1938,
+          "duration": 102,
+          "genres": [
+            "Adventure",
+            "Action",
+            "Romance"
+          ],
+          "description": "A heroic outlaw in medieval England fights against the tyranny of Prince John and the Sheriff of Nottingham, stealing from the rich to give to the poor, while wooing the noble Lady Marian.",
+          "watchLater": false,
+          "streamingServices": [
+            {
+              "name": "Sky",
+              "url": "https://www.skystore.com/product/the-adventures-of-robin-hood/e3c59825-6800-4347-8a46-1ee09d1df408",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/Sky_Group_logo_2020.svg.png?v=1741379860875"
+            },
+            {
+              "name": "Amazon Prime",
+              "url": "https://www.amazon.com/Adventures-Robin-Hood-Errol-Flynn/dp/B001NVIZ3E",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+            }
+          ]
+        },
+        {
+          "movieId": "006",
+          "title": "Mildred Pierce",
+          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/mildredpierce.jpg?v=1741116936815",
+          "year": 1945,
+          "duration": 111,
+          "genres": [
+            "Film-Noir",
+            "Drama",
+            "Mystery"
+          ],
+          "description": "A devoted mother works tirelessly to provide for her spoiled daughter, but her sacrifices lead to betrayal, murder, and heartbreak in this classic film noir about ambition and maternal obsession.",
+          "watchLater": false,
+          "streamingServices": [
+            {
+              "name": "Now TV",
+              "url": "https://www.nowtv.com/ie/online/mildred-pierce/iYEQZ2rcf32XLQGkC8McJY",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+            },
+            {
+              "name": "Amazon Prime",
+              "url": "https://www.primevideo.com/dp/amzn1.dv.gti.b9dfd13a-8c54-42db-95b0-373484a1421b?autoplay=0&ref_=atv_cf_strg_wb",
+              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+            }
+          ]
+        },
+        {
+          "id": "004",
+          "title": "casa",
+          "director": "Michael Curtiz"
+        }
+      ]
+    }
+  ]
+}

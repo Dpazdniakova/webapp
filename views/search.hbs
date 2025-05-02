@@ -1,0 +1,21 @@
+{{> menu id="search"}}
+
+<section class="ui left aligned middle aligned segment">
+  <form class="ui segment form" action = "/searchCategory" method = "POST">
+  <div class="field">
+    <label>Category</label>
+    <select name = "genre" id = "myDropdown"> // fetching answer for findResults controller
+      <option>Please select One</option>
+      {{#each genres}}
+        <option value = "{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+  </div>
+</form>
+  {{> results}}
+  
+</section>
+<script>
+    const dropdown = document.querySelector("#myDropdown");
+    dropdown.addEventListener("change", () => document.querySelector("form").submit());
+</script>

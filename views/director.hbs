@@ -1,0 +1,95 @@
+{{> menu}}
+
+{{#with singleDirector}}
+
+<div class="search-form">
+  <form action="/director/{{id}}" method="get">
+    <input type="text" id="searchBar" name="search" placeholder="Search by keyword..." class="ui input" value="{{query.search}}">
+  </form>
+</div>
+
+
+<div>
+  {{#if movies.length}} 
+    {{#each movies as |movie|}}
+ <section class="ui segment movie-row" style="margin-bottom: 30px;">
+        <div class="ui grid">
+           <!-- Movie Poster -->
+          <div class="four wide column" style = "text-align: center;">
+    <img src="{{movie.poster}}" alt="{{movie.title}}" class="ui large raised image" style="margin-bottom: 10px;">
+            
+            <!-- Button for Streaming Platforms -->
+            <a href="/streaming/{{movie.movieId}}" class="ui primary button" style="align-items: center; margin-top: 10px;">Where to Watch</a>
+          </div>
+     
+          <!-- Movie Details -->
+          <div class="twelve wide column">
+            <table class="ui celled table">
+              <tbody>
+                <tr>
+                  <td><strong>Title</strong></td>
+                  <td class="movie-title">{{movie.title}}</td>
+                </tr>
+                <tr>
+                  <td><strong>Year</strong></td>
+                  <td>{{movie.year}}</td>
+                </tr>
+                <tr>
+                  <td><strong>Genres</strong></td>
+                  <td>{{#each movie.genres}}<span class="ui label">{{this}}</span> {{/each}}</td>
+                </tr>
+                <tr>
+                  <td><strong>Duration</strong></td>
+                  <td>{{movie.duration}} min</td>
+                </tr>
+                <tr>
+                  <td><strong>Description</strong></td>
+                  <td class="movie-description">{{movie.description}}</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div>
+  <form 
+          class = "ui segment form" 
+          action="/director/{{../id}}/updatemovie/{{movie.movieId}}" 
+          method="POST"
+        >
+          <tr class="fields">
+            <td class="field">
+              <span class="ui input">
+               <input type="text" name="title" autofocus required 
+                      title = "Please include a valid Title" placeholder="Title" 
+					  value = "{{title}}">
+              </span>
+            </td>
+            <td class="field">
+              <span class="ui input">
+                <input type="text" name="director" required 
+                       title = "Please include a valid Director" placeholder="Director" 
+					   value = "{{director}}">
+              </span>
+            </td>
+            <td class="center aligned">
+              <button type = "submit" class = "editSubmit">
+                <i class="ui pencil icon "></i>
+              </button>
+            </td>
+            <td class="center aligned">
+              <a href="/director/{{../id}}/deletemovie/{{movie.movieId}}" title="Delete movie">
+    <i class="ui red trash icon"></i>
+  </a>
+            </td>
+          </tr>
+        </form> 
+</div>
+            
+          </div>
+        </div>
+      </section>
+  {{/each}}
+  {{/if}}
+</div>
+
+{{/with}}
+

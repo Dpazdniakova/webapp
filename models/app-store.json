@@ -1,0 +1,22 @@
+
+
+{
+  "info": {
+    "appTitle": "Movie Tracker",
+    "version": 0.2,
+    "creators": [
+      {
+        "name": "Daryana Pazdniakova",
+        "role": "Web Developer"
+      },
+      
+      {
+        "name": "Mary Lyng",
+        "role": "Professor"
+        
+      }
+    ],
+    "location": " SETU Waterford, Ireland"
+  } 
+}
+

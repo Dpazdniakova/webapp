@@ -1,0 +1,85 @@
+{{> menu}}
+<section class="ui container" style="padding-top: 2em;">
+  <div class="ui two column stackable grid">
+    
+    <!-- Left Side: Statistics -->
+    <div class="column" >
+      <div class="ui raised segment" style="padding: 2em; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+        <h2 class="ui center aligned header">About the Movie Tracker</h2>
+        <p style="text-align: center;">This app will allow users to create and maintain a collection of movies.</p>
+        
+        <div class="ui relaxed divided list">
+          {{#with info}}
+          
+          <div class="item">
+            <i class="music icon large"></i>
+            <div class="content">
+              <div class="header">App Title</div>
+              <div class="description">{{appTitle}}</div>
+            </div>
+          </div>
+  
+          <div class="item">
+            <i class="code branch icon large"></i>
+            <div class="content">
+              <div class="header">App Version</div>
+              <div class="description">Version {{version}}</div>
+            </div>
+          </div>    
+  
+          <div class="item">
+            <i class="map pin icon large"></i>
+            <div class="content">
+              <div class="header">Made in</div>
+              <div class="description">{{location}}</div>
+            </div>
+          </div>    
+  
+          <div class="item">
+            <i class="user icon large"></i>
+            <div class="content">
+              <div class="header">Created by</div>
+              <div class="description">{{creators.0.name}}</div>
+            </div>
+          </div>
+  
+          <div class="item">
+            <i class="user plus icon large"></i>
+            <div class="content">
+              <div class="header">With help from</div>
+              <div class="description">{{creators.1.name}}</div>
+            </div>
+          </div> 
+          
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Side: Map -->
+    <div class="column">
+      <div class="ui raised segment" style="background-color: white; padding: 2em; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
+        <h2 class="ui center aligned header" >App Location</h2>
+        <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Set default location (SETU Waterford, Ireland)
+    var map = L.map('map').setView([52.2455, -7.1395], 15);
+
+    // Add OpenStreetMap layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add marker for Waterford
+    L.marker([52.2455, -7.1395]).addTo(map)
+      .bindPopup("SETU Waterford, Ireland")
+      .openPopup();
+  });
+</script>
+

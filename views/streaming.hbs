@@ -1,0 +1,12 @@
+{{> menu}}
+
+<div class="ui segment">
+  <h2>Where to Watch {{title}}</h2>
+  {{#each platforms}}
+    <button class="platform-button" type="button">
+      <a href="{{this.url}}" target="_blank">
+        <img src="{{this.logo}}" alt="{{this.name}} logo" class="platform-logo">
+      </a>
+    </button>
+  {{/each}}
+</div>
