@@ -4,11 +4,10 @@ import express from 'express';
 import routes from "./routes.js";
 import logger from "./utils/logger.js";
 import { create } from 'express-handlebars';
-import directorStore from './models/directors.js';
 import app from './app.js';
 
-const port = 3000;
-// Add this middleware to parse form data
+const port = process.env.PORT || 3000;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
