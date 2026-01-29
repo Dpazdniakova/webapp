@@ -1,10 +1,11 @@
-const serverless = require('serverless-http');
+import serverless from 'serverless-http';
+import app from '../../app.js';
 
-// Dynamic import of ESM app.js so function can remain CommonJS
-let appPromise = import('../../app.js');
+const handler = serverless(app);
 
-exports.handler = async (event, context) => {
-  const { default: app } = await appPromise;
-  const handler = serverless(app);
+export const handlerFunction = async (event, context) => {
   return handler(event, context);
 };
+
+// Netlify looks for an exported `handler` symbol; re-export with that name
+export { handlerFunction as handler };
