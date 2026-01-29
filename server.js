@@ -5,9 +5,7 @@ import routes from "./routes.js";
 import logger from "./utils/logger.js";
 import { create } from 'express-handlebars';
 import directorStore from './models/directors.js';
-
-
-const app = express();
+import app from './app.js';
 
 const port = 3000;
 // Add this middleware to parse form data
