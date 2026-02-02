@@ -5,14 +5,14 @@ import directorStore from '../models/directors.js';
 import { v4 as uuidv4 } from 'uuid';
 
 const director_movies = {
-  createView(request, response) {
+  async createView(request, response) {
     const directorId = request.params.id;
     const searchTerm = request.query.search || '';
 
     logger.debug('Director id = ' + directorId);
     logger.debug('Search Term = ' + searchTerm);
 
-    const director = directorStore.getDirector(directorId);
+    const director = await directorStore.getDirector(directorId);
 
     const filteredMovies = searchTerm ? director.movies.filter(movie => {
       const titleMatch = movie.title.toLowerCase().includes(searchTerm.toLowerCase());
@@ -31,10 +31,10 @@ const director_movies = {
     response.render('director', viewData);
   },
 
-  showStreamingPlatforms(req, res) {
+  async showStreamingPlatforms(req, res) {
     const movieId = req.params.id;
 
-    const director = directorStore.getAllDirectors().find(d =>
+    const director = (await directorStore.getAllDirectors()).find(d =>
       d.movies && d.movies.some(m => String(m.movieId) === movieId)
     );
 
@@ -47,11 +47,11 @@ const director_movies = {
     res.render("streaming", { title: movie.title, platforms: movie.streamingServices });
   },
 
-   addMovie(request, response) {
+   async addMovie(request, response) {
     const directorId = request.params.id;
     console.log('Request body:', request.body);
 
-    const director = directorStore.getDirector(directorId);
+    const director = await directorStore.getDirector(directorId);
     const genresInput = request.body.genres;
     const genresArray = genresInput.split(',').map(g => g.trim());
 
@@ -66,18 +66,18 @@ const director_movies = {
       duration: 0,
       streamingServices: []
     };
-    directorStore.addMovie(director,newMovie)
+    await directorStore.addMovie(director,newMovie)
     response.redirect('/director/' + directorId);
   },
 
-   deleteMovie(request, response) {
+   async deleteMovie(request, response) {
     const directorId = request.params.id;
     const movieId = request.params.movieId;
     logger.debug(`Deleting movie ${movieId} from director ${directorId}`);
-     directorStore.removeMovie(directorId,movieId)
+     await directorStore.removeMovie(directorId,movieId)
     response.redirect('/director/' + directorId);
   },
-    updateMovie(request, response) {
+    async updateMovie(request, response) {
     const directorId = request.params.id;
     const movieId = request.params.movieId;
     logger.debug("updating movie " + movieId);
@@ -86,7 +86,7 @@ const director_movies = {
       title: request.body.title,
       director: request.body.director
     };
-    directorStore.editMovie(directorId, movieId, updatedMovie);
+    await directorStore.editMovie(directorId, movieId, updatedMovie);
     response.redirect('/director/' + directorId);
 }
 };

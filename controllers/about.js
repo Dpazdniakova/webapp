@@ -5,12 +5,12 @@ import appStore from "../models/app-store.js";
 
 const about = {
 
-  createView(request, response) {
+  async createView(request, response) {
     
     logger.info("Start page loading!")
     const viewData = {
       title: "Welcome to the Playlist app!",
-      info: appStore.getAppInfo()
+      info: await appStore.getAppInfo()
     } ;
     
     response.render('about',viewData)

@@ -6,9 +6,9 @@ import logger from "../utils/logger.js";
 import directorStore from "../models/directors.js"; 
 
 
-const getAllGenres = () => {
+const getAllGenres = async () => {
   const genreSet = new Set();
-  const directors = directorStore.getAllDirectors(); 
+  const directors = await directorStore.getAllDirectors(); 
 
   directors.forEach(director => {
     director.movies.forEach(movie => {
@@ -37,14 +37,14 @@ const genreSearch = {
     response.render('search', viewData);
   },
   
-  findResult(request, response) {
+  async findResult(request, response) {
     const genre = request.body.genre;
     logger.debug('Movie category = ' + genre);
 
     const viewData = {
       title: 'Playlist',
-      foundGenres: directorStore.getMoviesByGenre(genre),
-      genres: getAllGenres(),
+      foundGenres: await directorStore.getMoviesByGenre(genre),
+      genres: await getAllGenres(),
       genreTitle: genre
     };
     

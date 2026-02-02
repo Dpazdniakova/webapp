@@ -1,11 +1,13 @@
 'use strict';
 
-import { Low } from "lowdb";
-import { JSONFile } from "lowdb/node";
+// import { Low } from "lowdb";
+// import { JSONFile } from "lowdb/node";
 
-class JsonStore {
+import { getStore } from '@netlify/blobs'
+
+class BlobStore {
   constructor(file, defaults) {
-    this.db = new Low(new JSONFile(file), defaults);
+    this.db = getStore(file, defaults);
     this.db.read();
   }
 
@@ -68,6 +70,6 @@ class JsonStore {
   }
 }
 
-export default JsonStore;
+export default BlobStore;
 
 

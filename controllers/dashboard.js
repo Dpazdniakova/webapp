@@ -6,32 +6,32 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const dashboard = {
-  createView(request, response) {
+  async createView(request, response) {
     logger.info("Dashboard page loading!");
     
     
     const viewData = {
       title: "Movie Tracker Dashboard",
-      directors: directorStore.getAllDirectors()
+      directors: await directorStore.getAllDirectors()
     };
     
     logger.debug(viewData.directors);
     response.render('dashboard', viewData);
   },
   
-  addDirector(request, response) {
+  async addDirector(request, response) {
     const newDirector = {
       id: uuidv4(),
       name: request.body.name,
       movies: []
     };
-    directorStore.addDirector(newDirector);
+   await directorStore.addDirector(newDirector);
     response.redirect('/dashboard');
 },
- deleteDirector(request, response) {
+ async deleteDirector(request, response) {
     const directorId = request.params.id;
     logger.debug(`Deleting Director ${directorId}`);
-    directorStore.removeDirector(directorId);
+    await directorStore.removeDirector(directorId);
     response.redirect("/dashboard");
 }
   

@@ -1,14 +1,9 @@
 'use strict';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import JsonStore from './json-store.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import BlobStore from './blob-store.js';
 
 const appStore = {
 
-  store: new JsonStore(join(__dirname, 'app-store.json'), { info: {} }),
+  store: new BlobStore('app-store', { info: {} }),
   collection: 'info',
   array: 'creators',
 

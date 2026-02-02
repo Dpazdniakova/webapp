@@ -1,15 +1,12 @@
 'use strict';
 
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-import JsonStore from './json-store.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import BlobStore from './blob-store.js';;
+
 
 const directorStore = {
    
-  store: new JsonStore(join(__dirname, 'directors.json'), { directors: [] }),
+  store: new BlobStore('directors', { directors: [] }),
   collection: 'directors',
   array: 'movies',
   
