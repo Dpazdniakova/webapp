@@ -7,17 +7,20 @@ import { getStore } from '@netlify/blobs'
 
 class BlobStore {
   constructor(storeName, defaults) {
+    
     this.storeName = storeName;
     this.defaults = defaults;
     
-    // Use getStore with just the name - it should auto-detect the environment
-    try {
-      this.store = getStore(storeName);
-    } catch (error) {
-      console.error('Failed to initialize blob store:', error);
-      // Fallback: initialize with empty context for now
-      this.store = null;
-    }
+    const siteID = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
+    const token = process.env.NETLIFY_ACCESS_TOKEN || process.env.NETLIFY_TOKEN;
+    
+   
+      this.store = this.store = getStore({
+      name: storeName,
+      siteID: siteID,
+      token: token,
+    });
+    
   }
 
   findAll(collection) {
