@@ -1,4 +1,4 @@
-import { handler as functionHandler } from '../netlify/functions/api.js';
+import { handler as functionHandler } from '../netlify/functions/api.mjs';
 
 async function invoke(path = '/') {
   const event = {
