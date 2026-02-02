@@ -1,12 +1,15 @@
 'use strict';
 
-import logger from '../utils/logger.js';
-import * as JsonStoreModule from './json-store.js';
-const JsonStore = JsonStoreModule.default || JsonStoreModule;
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import JsonStore from './json-store.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const directorStore = {
    
-  store: new JsonStore('./models/directors.json', { directors: [] }),
+  store: new JsonStore(join(__dirname, 'directors.json'), { directors: [] }),
   collection: 'directors',
   array: 'movies',
   

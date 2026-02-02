@@ -21,7 +21,7 @@ async function invoke(path = '/') {
   }
 }
 
-// Run for a few paths
+
 await invoke('/');
 await invoke('/about');
 await invoke('/dashboard');
