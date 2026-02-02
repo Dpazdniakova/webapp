@@ -1,8 +1,6 @@
 'use strict';
 
-import logger from '../utils/logger.js';
-import * as JsonStoreModule from './json-store.js';
-const JsonStore = JsonStoreModule.default || JsonStoreModule;
+import JsonStore from './json-store.js';
 
 const appStore = {
 
