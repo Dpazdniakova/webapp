@@ -69,6 +69,10 @@ const directorStore = {
   },
   async editMovie(directorId, movieId, updatedMovie) {
     await this.store.editItem(this.collection, directorId, movieId, this.array, updatedMovie);
-}
+  },
+  async moveMovie(fromDirectorId, toDirectorId, movieId, updatedMovie) {
+    await this.store.removeItem(this.collection, fromDirectorId, this.array, movieId);
+    await this.store.addItem(this.collection, toDirectorId, this.array, updatedMovie);
+  }
 };
 export default directorStore;

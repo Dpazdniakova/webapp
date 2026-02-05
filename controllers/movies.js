@@ -77,16 +77,44 @@ const director_movies = {
      await directorStore.removeMovie(directorId,movieId)
     response.redirect('/director/' + directorId);
   },
+
   async updateMovie(request, response) {
     const directorId = request.params.id;
     const movieId = request.params.movieId;
-    logger.debug("updating movie " + movieId);
+ 
+    const director = await directorStore.getDirector(directorId);
+    const existingMovie = director?.movies?.find((m) => String(m.movieId) === String(movieId));
+    if (!existingMovie) {
+      response.redirect('/director/' + directorId);
+      return;
+    }
+
     const updatedMovie = {
-      movieId: movieId,
+      ...existingMovie,
       title: request.body.title,
-      director: request.body.director
     };
-    await directorStore.editMovie(directorId, movieId, updatedMovie);
+
+    const requestedDirectorName = (request.body.director || "").trim();
+    const currentDirectorName = (director?.name || "").trim();
+
+    if (!requestedDirectorName || requestedDirectorName.toLowerCase() === currentDirectorName.toLowerCase()) {
+      await directorStore.editMovie(directorId, movieId, updatedMovie);
+      response.redirect('/director/' + directorId);
+      return;
+    }
+
+    const allDirectors = await directorStore.getAllDirectors();
+    const targetDirector = allDirectors.find((d) =>
+      (d.name || "").trim().toLowerCase() === requestedDirectorName.toLowerCase()
+    );
+
+    if (!targetDirector || targetDirector.id === directorId) {
+      await directorStore.editMovie(directorId, movieId, updatedMovie);
+      response.redirect('/director/' + directorId);
+      return;
+    }
+
+    await directorStore.moveMovie(directorId, targetDirector.id, movieId, updatedMovie);
     response.redirect('/director/' + directorId);
   }
 };

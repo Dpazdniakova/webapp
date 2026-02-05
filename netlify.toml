@@ -20,3 +20,8 @@
   to = "/.netlify/functions/api/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/style.css"
+  to = "/style.css"
+  status = 200
