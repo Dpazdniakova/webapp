@@ -10,32 +10,32 @@ const directorStore = {
   collection: 'directors',
   array: 'movies',
   
-  getAllDirectors() {
-    return this.store.findAll(this.collection);
+  async getAllDirectors() {
+    return await this.store.findAll(this.collection);
   },
  
-  getDirector(id) {
-    return this.store.findOneBy(this.collection, (director => director.id === id));
+  async getDirector(id) {
+    return await this.store.findOneBy(this.collection, (director => director.id === id));
 },
   
-  addMovie(id, movie) {
-    this.store.addItem(this.collection, id, this.array, movie);
+  async addMovie(idOrDirector, movie) {
+    const id = typeof idOrDirector === 'object' ? idOrDirector.id : idOrDirector;
+    await this.store.addItem(this.collection, id, this.array, movie);
 },
-  addDirector(director) {
-    this.store.addCollection(this.collection, director);
+  async addDirector(director) {
+    await this.store.addCollection(this.collection, director);
 },
- removeMovie(id, movieId) {
+ async removeMovie(id, movieId) {
   console.log(`Removed movie ${movieId} from director ${id}`);
-   this.store.removeItem(this.collection, id, this.array, movieId);
+   await this.store.removeItem(this.collection, id, this.array, movieId);
 },
-  removeDirector (id) {
-    const director = this.getDirector(id);
-    this.store.removeCollection(this.collection, director);
+  async removeDirector (id) {
+    await this.store.removeCollection(this.collection, id);
   },
   
   // Get directors with movies of a specific genre (helper method, private)
-  getDirectorsWithGenre(genre) {
-    return this.store.findBy(this.collection, director =>
+  async getDirectorsWithGenre(genre) {
+    return await this.store.findBy(this.collection, director =>
       director.movies && director.movies.some(movie =>
         movie.genres.some(g =>
           g.toLowerCase() === genre.toLowerCase()
@@ -45,9 +45,9 @@ const directorStore = {
   },
   
   // The main method for getting movies by genre
-  getMoviesByGenre(genre) {
+  async getMoviesByGenre(genre) {
     const matchingMovies = [];
-    const directorsWithMatchingMovies = this.getDirectorsWithGenre(genre);
+    const directorsWithMatchingMovies = await this.getDirectorsWithGenre(genre);
     
     directorsWithMatchingMovies.forEach(director => {
       // Filter to only include movies that match the genre
@@ -67,8 +67,8 @@ const directorStore = {
     
     return matchingMovies;
   },
-  editMovie(directorId, movieId, updatedMovie) {
-    this.store.editItem(this.collection, directorId, movieId, this.array, updatedMovie);
+  async editMovie(directorId, movieId, updatedMovie) {
+    await this.store.editItem(this.collection, directorId, movieId, this.array, updatedMovie);
 }
 };
 export default directorStore;

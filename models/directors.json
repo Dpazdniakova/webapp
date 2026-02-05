@@ -7,7 +7,7 @@
         {
           "movieId": "001",
           "title": "The Dark Knight",
-          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/thedarknight.jpg?v=1741116929238",
+          "poster": "https://cdn.europosters.eu/image/1300/posters/the-dark-knight-trilogy-batman-i198201.jpg",
           "year": 2008,
           "duration": 152,
           "genres": [
@@ -21,19 +21,19 @@
             {
               "name": "Sky",
               "url": "https://www.skystore.com/product/the-dark-knight/99f8df58-046e-47b2-abd0-4a0b22fa40df",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/Sky_Group_logo_2020.svg.png?v=1741379860875"
+              "logo": "https://images.contentstack.io/v3/assets/blt4b099fa9cc3801a6/blt86beac52e6e8c468/Sky-spectrum-rgb.png"
             },
             {
               "name": "Now TV",
               "url": "https://www.nowtv.com/ie/online/the-dark-knight-2008/A5EK6sKrAaydmp1JYfy1h",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+              "logo": "https://static.skyassets.com/contentstack/assets/blt4b099fa9cc3801a6/bltc6e895b81001357f/68a31c9a5a75cb8b4d9c9d0f/NOW2a.jpg?downsize=1200:*&output-format=jpg"
             }
           ]
         },
         {
           "movieId": "002",
           "title": "Inception",
-          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/inception.jpg?v=1741116931277",
+          "poster": "https://storage.googleapis.com/pod_public/1300/263129.jpg",
           "year": 2010,
           "duration": 148,
           "genres": [
@@ -47,19 +47,19 @@
             {
               "name": "Amazon Prime",
               "url": "https://www.primevideo.com/dp/amzn1.dv.gti.5ca9f69c-796e-2320-e56f-f758fa5957b5?autoplay=0&ref_=atv_cf_strg_wb",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+              "logo": "https://1000logos.net/wp-content/uploads/2022/10/Amazon-Prime-Video-Logo.png"
             },
             {
               "name": "Now TV",
               "url": "https://www.nowtv.com/ie/online/inception-2010/A5EK5E17HwqzgJFQtcAjd",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+              "logo": "https://static.skyassets.com/contentstack/assets/blt4b099fa9cc3801a6/bltc6e895b81001357f/68a31c9a5a75cb8b4d9c9d0f/NOW2a.jpg?downsize=1200:*&output-format=jpg"
             }
           ]
         },
         {
           "movieId": "003",
           "title": "Interstellar",
-          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/interstellar.jpg?v=1741116939099",
+          "poster": "https://cdn.europosters.eu/image/1300/posters/interstellar-go-further-i23316.jpg",
           "year": 2014,
           "duration": 169,
           "genres": [
@@ -73,19 +73,14 @@
             {
               "name": "Now TV",
               "url": "https://www.skystore.com/product/interstellar/36c3f6fa-d396-4579-88c5-003667fadddb",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+              "logo": "https://static.skyassets.com/contentstack/assets/blt4b099fa9cc3801a6/bltc6e895b81001357f/68a31c9a5a75cb8b4d9c9d0f/NOW2a.jpg?downsize=1200:*&output-format=jpg"
             },
             {
               "name": "Amazon Prime",
               "url": "https://www.amazon.com/Interstellar-Matthew-McConaughey/dp/B00TU9UFTS",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+              "logo": "https://1000logos.net/wp-content/uploads/2022/10/Amazon-Prime-Video-Logo.png"
             }
           ]
-        },
-        {
-          "id": "001",
-          "title": "The ",
-          "director": "Christopher Nolan"
         }
       ]
     },
@@ -96,7 +91,7 @@
         {
           "movieId": "004",
           "title": "Casablanca",
-          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/casablanca.jpg?v=1741116933128",
+          "poster": "https://storage.googleapis.com/pod_public/1300/145804.jpg",
           "year": 1942,
           "duration": 102,
           "genres": [
@@ -110,19 +105,19 @@
             {
               "name": "Sky",
               "url": "https://www.skystore.com/product/casablanca/4f4ba117-ce9e-49a4-ab70-5194bb9ab1c6",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/Sky_Group_logo_2020.svg.png?v=1741379860875"
+              "logo": "https://images.contentstack.io/v3/assets/blt4b099fa9cc3801a6/blt86beac52e6e8c468/Sky-spectrum-rgb.png"
             },
             {
               "name": "Amazon Prime",
               "url": "https://www.primevideo.com/dp/amzn1.dv.gti.d6e46deb-31db-496e-ad4b-36c3279188cd?autoplay=0&ref_=atv_cf_strg_wb",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+              "logo": "https://1000logos.net/wp-content/uploads/2022/10/Amazon-Prime-Video-Logo.png"
             }
           ]
         },
         {
           "movieId": "005",
           "title": "The Adventures of Robin Hood",
-          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/theadventuresofrobinhood.jpg?v=1741116928072",
+          "poster": "https://media.posterlounge.com/img/products/510000/507208/507208_poster.jpg",
           "year": 1938,
           "duration": 102,
           "genres": [
@@ -136,19 +131,19 @@
             {
               "name": "Sky",
               "url": "https://www.skystore.com/product/the-adventures-of-robin-hood/e3c59825-6800-4347-8a46-1ee09d1df408",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/Sky_Group_logo_2020.svg.png?v=1741379860875"
+              "logo": "https://images.contentstack.io/v3/assets/blt4b099fa9cc3801a6/blt86beac52e6e8c468/Sky-spectrum-rgb.png"
             },
             {
               "name": "Amazon Prime",
               "url": "https://www.amazon.com/Adventures-Robin-Hood-Errol-Flynn/dp/B001NVIZ3E",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+              "logo": "https://1000logos.net/wp-content/uploads/2022/10/Amazon-Prime-Video-Logo.png"
             }
           ]
         },
         {
           "movieId": "006",
           "title": "Mildred Pierce",
-          "poster": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/mildredpierce.jpg?v=1741116936815",
+          "poster": "https://m.media-amazon.com/images/I/618-z5eYfKL._AC_SY879_.jpg",
           "year": 1945,
           "duration": 111,
           "genres": [
@@ -162,19 +157,14 @@
             {
               "name": "Now TV",
               "url": "https://www.nowtv.com/ie/online/mildred-pierce/iYEQZ2rcf32XLQGkC8McJY",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/nowtv.png?v=1741377575921"
+              "logo": "https://static.skyassets.com/contentstack/assets/blt4b099fa9cc3801a6/bltc6e895b81001357f/68a31c9a5a75cb8b4d9c9d0f/NOW2a.jpg?downsize=1200:*&output-format=jpg"
             },
             {
               "name": "Amazon Prime",
               "url": "https://www.primevideo.com/dp/amzn1.dv.gti.b9dfd13a-8c54-42db-95b0-373484a1421b?autoplay=0&ref_=atv_cf_strg_wb",
-              "logo": "https://cdn.glitch.global/fd1786af-0a57-4f8d-878e-80dd53e2bfb0/02dIsBiVpmVTMeXkrKxWy0W-13.webp?v=1741380195363"
+              "logo": "https://1000logos.net/wp-content/uploads/2022/10/Amazon-Prime-Video-Logo.png"
             }
           ]
-        },
-        {
-          "id": "004",
-          "title": "casa",
-          "director": "Michael Curtiz"
         }
       ]
     }

@@ -77,18 +77,18 @@ const director_movies = {
      await directorStore.removeMovie(directorId,movieId)
     response.redirect('/director/' + directorId);
   },
-    async updateMovie(request, response) {
+  async updateMovie(request, response) {
     const directorId = request.params.id;
     const movieId = request.params.movieId;
     logger.debug("updating movie " + movieId);
     const updatedMovie = {
-      id: movieId,
+      movieId: movieId,
       title: request.body.title,
       director: request.body.director
     };
     await directorStore.editMovie(directorId, movieId, updatedMovie);
     response.redirect('/director/' + directorId);
-}
+  }
 };
 
 export default director_movies;

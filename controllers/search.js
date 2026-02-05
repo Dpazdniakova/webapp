@@ -1,5 +1,3 @@
-
-
 'use strict';
 
 import logger from "../utils/logger.js";
@@ -24,12 +22,14 @@ const getAllGenres = async () => {
 };
 
 const genreSearch = {
-  createView(request, response) {
+  async createView(request, response) {
     logger.info("Genre Search page loading!");
+
+    const genres = await getAllGenres();
 
     const viewData = {
       title: "Movie Genre Search",
-      genres: getAllGenres()
+      genres
     };
 
     logger.debug(viewData.genres);

@@ -7,8 +7,8 @@ const appStore = {
   collection: 'info',
   array: 'creators',
 
-  getAppInfo() {
-    return this.store.findAll(this.collection);
+  async getAppInfo() {
+    return await this.store.findAll(this.collection);
   },
 
 };
