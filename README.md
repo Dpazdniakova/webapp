@@ -1,6 +1,6 @@
 # Assignment 1 - Movie Tracker
 
-A full-stack MVC-style Movie Tracker web application built with Node.js, Express, and Handlebars. Search for movies by director, view movie details, and check streaming availability. Deployed serverlessly using Netlify Functions. Live : https://github.com/Dpazdniakova/webapp
+A full-stack MVC-style Movie Tracker web application built with Node.js, Express, and Handlebars. Search for movies by director, view movie details, and check streaming availability. Deployed serverlessly using Netlify Functions. Live : https://movietracker1.netlify.app/
 
 ## Features
 
