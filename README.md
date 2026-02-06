@@ -1,6 +1,6 @@
 # Assignment 1 - Movie Tracker
 
-A web application that allows users to search for movies by a director and find streaming platform availability.
+A full-stack MVC-style Movie Tracker web application built with Node.js, Express, and Handlebars. Search for movies by director, view movie details, and check streaming availability. Deployed serverlessly using Netlify Functions. 
 
 ## Features
 
